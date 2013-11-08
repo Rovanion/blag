@@ -40,7 +40,7 @@ div#runtomkring{
 div#main{
     width:44em;
     height:auto;
-    margin:0em -1.5em;
+    margin:0em -2em;
     background-color:#E8D8A0;
     border-radius:1.5em 0em 1.5em 1.5em;
     box-shadow:0em 0em 3em rgba(0, 0, 0, 0.3);
@@ -89,24 +89,28 @@ div#blogbox{
     -webkit-border-radius:0.5em;
 }
 div#beställning{
-    margin: 0em -1.5em;
+    margin: 0em -2em;
     background-color:#E8D8A0;
     text-align:right;
     float: right;
     position:relative;
     padding: 2em 2em 1em 0em;
-    width: 7em;
-    height:19em;
+    width: 8em;
+    height:12em;
     border-radius:0em 1.5em 1.5em 0em;
     box-shadow:2px 2px 30px rgba(0, 0, 0, 0.3);
     -webkit-border-radius:0em 1.5em 1.5em 0em;
     -webkit-box-shadow:2px 2px 40px rgba(0, 0, 0, 0.25);
 }
+div#beställning > h3{
+    line-height: 1.3em;
+}
+
 div#fulingen{
     position:absolute;
     float: right;
     background-color:#E8D8A0;
-    margin: 0em 40.5em;
+    margin: 0em 40em;
     width: 2em;
     height:23em;
 }
