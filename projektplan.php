@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 include 'libR.php';
 include 'libAuth.php';
 session_start();

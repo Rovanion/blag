@@ -5,14 +5,14 @@ function makeHead($title){
 		<!DOCTYPE HTML>
 		<html>
 			<head>
-			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-			<link href="style" rel="stylesheet" type="text/css">
+			<meta http-equiv="Content-Type" content="text/html; charset="iso-8859-1">
+			<link href="style.css" rel="stylesheet" type="text/css">
 			<LINK REL="SHORTCUT ICON" href="img/icon.ico">
 			<title>'. $title. '</title>
 		</head>
 	');
 }
- 
+
 function endBody(){
   	print('
 	 	</div>
@@ -20,33 +20,33 @@ function endBody(){
 		</html>
 	');
  }
- 
+
 function makeVisitCounter(){
- 	$i = $_COOKIE['besÃ¶k'] + 1;
-	setcookie("besÃ¶k", $i, time() + 3600 * 24 * 7);
-	$_SESSION['besÃ¶k'] += 1;
-	$y = $_SESSION['besÃ¶k'];
+ 	$i = $_COOKIE['besök'] + 1;
+	setcookie("besök", $i, time() + 3600 * 24 * 7);
+	$_SESSION['besök'] += 1;
+	$y = $_SESSION['besök'];
  }
- 
+
 function makeBottom(){
  	print('<div id="bottom">');
- 	if ($_COOKIE["besÃ¶k"] == 1)
- 		echo "<h6>VÃ¤lkommen pÃ¥ ditt fÃ¶rsta besÃ¶k</h6>";
+ 	if ($_COOKIE["besök"] == 1)
+ 		echo "<h6>Välkommen på ditt första besök</h6>";
  	else{
  		$timmar = 20;
- 		
-		print(' 
-		<h6> Det hÃ¤r Ã¤r ditt '. $_COOKIE["besÃ¶k"]. ':e besÃ¶k</h6>'
+
+		print('
+		<h6> Det här är ditt '. $_COOKIE["besök"]. ':e besök</h6>'
 		);
 	}
-		/* '<h6> Antal besÃ¶k den hÃ¤r sessionen: '. $_SESSION[besÃ¶k] */
+		/* '<h6> Antal besök den här sessionen: '. $_SESSION[besök] */
  }
- 
+
 function makeMeny($noLogin){
 	global $loggedIn;
 
  	print('
- 		<div id="bestÃ¤llning">
+ 		<div id="beställning">
 		<h2>Meny</h2>
 		<h3>
 		<a href="./tid.php">Tid</a><br />
@@ -55,7 +55,7 @@ function makeMeny($noLogin){
 		<a href="./projektplan.php">Projektplan</a><br />
 	');
 
- 	if($loggedIn){				//Om nÃ¥gon Ã¤r inloggad visas inte inloggningsfÃ¤lten
+ 	if($loggedIn){				//Om någon är inloggad visas inte inloggningsfälten
  		print ('
 			<br />
  			<a href="./publish.php">Publisera</a><br />
@@ -75,15 +75,15 @@ function makeMeny($noLogin){
  	else{
 	 	  ?>
 	 	  	</h3>
-	 		<br />
+	 		<br /><!--
 	 			<form  action="" method="post">
-					<label for="Anv">AnvÃ¤ndarnamn:</label>
-					<input type="text" style="width:7em" id="Anv" name="user" title="AnvÃ¤ndarnamn" maxlenght="30"><br />
-					<label for="Pass1">LÃ¶senord:</label>
-					<input type="password" style="width:7em" id="Pass1" name="password" title="LÃ¶senord"><br />
+					<label for="Anv">Användarnamn:</label>
+					<input type="text" style="width:7em" id="Anv" name="user" title="Användarnamn" maxlenght="30"><br />
+					<label for="Pass1">Lösenord:</label>
+					<input type="password" style="width:7em" id="Pass1" name="password" title="Lösenord"><br />
 					<input type="submit" value="Login" name="login"></input>
 				</form>
-		
+				-->
 	 		</div>
 			<div id=fulingen></div>
 	 	<?php

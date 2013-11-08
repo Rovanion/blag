@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 include 'libAuth.php';
 include 'libR.php';
 

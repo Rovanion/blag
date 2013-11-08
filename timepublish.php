@@ -1,4 +1,5 @@
 <?php 
+error_reporting(0);
 include 'libR.php';
 include 'libAuth.php';
 
@@ -12,7 +13,7 @@ if($loggedIn == false){
 if (isset($_POST[submit])){
 	$title = mysql_real_escape_string($_POST[title]);
 	$content = mysql_real_escape_string($_POST[content]);
-	$sql = "INSERT INTO `matste_bloggen`.`tid` 
+	$sql = "INSERT INTO `bloggen`.`tid` 
 	(`timestamp`, `timmar`, `kommentar`)
 	VALUES (CURRENT_TIMESTAMP, '{$title}', '{$content}')";
 	$i = mysql_query($sql);
